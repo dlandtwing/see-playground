@@ -14,6 +14,7 @@ public class HelloController {
 
     @GetMapping("/hello")
     public Greeting hello(@RequestParam(value = "name", defaultValue = "World") String name) {
+        final String template = "Hello, %s";
         return new Greeting(1, String.format("Hello, %s", name));
     }
 }
