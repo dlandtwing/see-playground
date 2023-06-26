@@ -23,7 +23,7 @@ public class MathController {
     private final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 
     @PostMapping(
-            path = "/math/area/rectangle",
+            path = "/math/area_computation/hyperrectangle",
             consumes = MediaType.APPLICATION_XML_VALUE,
             produces = MediaType.APPLICATION_XML_VALUE
     )
