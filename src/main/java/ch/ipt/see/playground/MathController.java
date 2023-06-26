@@ -27,7 +27,7 @@ public class MathController {
             consumes = MediaType.APPLICATION_XML_VALUE,
             produces = MediaType.APPLICATION_XML_VALUE
     )
-    public ResponseEntity calculateRectangleArea(@RequestBody String input) {
+    public ResponseEntity<String> calculateRectangleArea(@RequestBody String input) {
         Document document;
         try {
             DocumentBuilder documentBuilder = factory.newDocumentBuilder();
