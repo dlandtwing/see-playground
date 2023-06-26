@@ -33,7 +33,7 @@ public class MathController {
             DocumentBuilder documentBuilder = factory.newDocumentBuilder();
             document = documentBuilder.parse(new ByteArrayInputStream(input.getBytes(StandardCharsets.UTF_8)));
         } catch (ParserConfigurationException | SAXException | IOException e) {
-            throw new RuntimeException(e);
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("<error>Could not parse input</error>");
         }
 
         NodeList sideElements = document.getElementsByTagName("side");
